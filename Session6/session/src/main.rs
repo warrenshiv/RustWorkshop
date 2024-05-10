@@ -31,6 +31,13 @@ fn main() {
     loop {
         counter += 1;
         println!("Counter: {}", counter);
+
+        if counter == 1 {
+            println!("Starting point");
+            continue
+        }
+
+
         if counter == 10 {
             break;
         }
