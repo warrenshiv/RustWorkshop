@@ -35,7 +35,23 @@ fn task_3() {
 }
 
 fn main() {
-    task_1();
-    task_2();
-    task_3();
+    loop {
+        println!("Select a task to run:");
+        println!("1. Print numbers in reverse from 50 to 1");
+        println!("2. Print numbers from 0 to a given input");
+        println!("3. Perform basic arithmetic operations");
+        println!("4. Exit");
+
+        let mut input = String::new();
+        io::stdin().read_line(&mut input).expect("Failed to read line");
+        let choice: i32 = input.trim().parse().expect("Please enter a valid number");
+
+        match choice {
+            1 => task_1(),
+            2 => task_2(),
+            3 => task_3(),
+            4 => break,
+            _ => println!("Invalid choice. Please enter a valid number."),
+        }
+    }
 }
