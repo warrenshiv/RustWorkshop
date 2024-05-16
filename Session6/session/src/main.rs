@@ -72,4 +72,24 @@ fn main() {
     for element in array{
         println!("We are looping in item {element}");
     }
+    
+    // Printing even numbers between 0 and 10 using for loop
+    for number in 0..10 {
+        if number % 2 == 0 {
+            println!("Even number: {number}");
+        }
+    }
+
+    let array = [5, 10, 15, 20, 50];
+
+    let mut index = 0;
+
+    while index < array.len() {
+        println!("We are looping on item , array[index]");
+        index += 1;
+    }
+
+
+
+
 }
